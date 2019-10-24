@@ -6,7 +6,6 @@ import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,9 +13,9 @@ import com.zigma.daos.CustomerDao;
 import com.zigma.entities.Customer;
 
 /**
- * @author Arib aka FREAKSTER
+ * @author Arib
  * @creation_date 4th Oct 2019 11:39
- * @modification_date 10th Oct 2019 17:39
+ * @modification_date 20th Oct 2019 17:39
  * @version 3.0
  * @copyright Zensar Tech
  * @description It is Customer Service Class This is used in Business Layer.

@@ -9,11 +9,9 @@ package com.zigma.entities;
  * @description It is a POJO Class.
  */
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -24,7 +22,7 @@ public class Admin {
 	@Id
 	private long adminId;
 
-	@OneToOne(mappedBy = "admin")
+	@OneToOne(cascade=CascadeType.ALL,mappedBy = "admin")
 	@JsonIgnore
 	private Login login;
 

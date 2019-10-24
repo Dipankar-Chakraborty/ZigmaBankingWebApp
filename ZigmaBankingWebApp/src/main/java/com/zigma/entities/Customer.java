@@ -11,16 +11,15 @@ package com.zigma.entities;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import org.springframework.stereotype.Component;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Component
@@ -32,7 +31,7 @@ public class Customer {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long crn;
 
-	@OneToOne(mappedBy = "customer")
+	@OneToOne(cascade=CascadeType.ALL,mappedBy = "customer")
 	@JsonIgnore
 	private Login login;
 	@Column(nullable = false)

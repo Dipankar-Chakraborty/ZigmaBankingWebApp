@@ -5,10 +5,9 @@ import java.util.List;
 
 
 import com.zigma.entities.Beneficiary;
-import com.zigma.entities.Customer;
 
 /**
- * @author Arib aka FREAKSTER
+ * @author Arib Anwar
  * @creation_date 4th Oct 2019 10:07
  * @modificationDate 10th Oct 2019 16:00
  * @version 3.0

@@ -1,6 +1,5 @@
 package com.zigma.services;
 
-import com.zigma.entities.Account;
 import com.zigma.entities.Admin;
 
 public interface AdminService {

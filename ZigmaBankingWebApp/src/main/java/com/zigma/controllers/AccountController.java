@@ -2,7 +2,7 @@ package com.zigma.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,12 +17,12 @@ public class AccountController {
 	private AccountService accountService;
 
 
-	@GetMapping("/cust/{id}")
-	public Account findAccountByAccountNo(long accountNo) {
+	@GetMapping("/account/{accno}")
+	public Account findAccountByAccountNo(@PathVariable("accno") long accountNo) {
 		return accountService.findAccountByAccountNo(accountNo);
 	}
 
-	@PutMapping("/cust/update")
+	@PutMapping("/account/update")
 	public String update(Account account) {
 		//if(productService.findProductId(product.getProductId())!=null) {
 		if (accountService.findAccountByAccountNo(account.getAccountNo())!=null) {

@@ -6,13 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.zigma.daos.BeneficiaryDao;
-import com.zigma.entities.Account;
 import com.zigma.entities.Beneficiary;
 
 /**
- * @author Arib aka FREAKSTER
+ * @author Arib
  * @creation_date 4th Oct 2019 11:39
- * @modification_date 10th Oct 2019 17:39
+ * @modification_date 20th Oct 2019 17:39
  * @version 3.0
  * @copyright Zensar Tech
  * @description It is Customer Service Class This is used in Business Layer.

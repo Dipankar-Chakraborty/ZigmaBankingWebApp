@@ -9,10 +9,10 @@ import org.springframework.stereotype.Repository;
 import com.zigma.entities.Customer;
 
 /**
- * @author Arib aka FREAKSTER
+ * @author Arib
  * @creation_date 4th Oct 2019 10:23
- * @modificationDate 11thOct 2019 10:09
- * @version 2.0
+ * @modificationDate 21thOct 2019 10:09
+ * @version 1.0
  * @copyright Zensar Tech
  * @description It is Product Dao Class.
  * 				This uses persistent Layer.

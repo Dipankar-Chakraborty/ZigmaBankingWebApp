@@ -3,7 +3,6 @@ package com.zigma.services;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.zigma.daos.AccountDao;
 import com.zigma.entities.Account;
 import com.zigma.entities.Beneficiary;
 import com.zigma.exceptions.AccountNotFoundException;

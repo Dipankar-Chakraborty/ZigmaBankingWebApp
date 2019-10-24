@@ -10,7 +10,6 @@ package com.zigma.entities;
  */
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,9 +30,9 @@ public class Beneficiary {
 	private String ifsc;
 	private String bankName;
 	private String nickName;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JsonIgnore
-	@JoinColumn(name = "accountId")
+	@JoinColumn(name = "accountNo")
 	private Account account;
 	@OneToOne(mappedBy = "beneficiary")
 	@JsonIgnore

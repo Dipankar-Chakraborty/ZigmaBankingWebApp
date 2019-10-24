@@ -13,9 +13,9 @@ import com.zigma.entities.Beneficiary;
 import com.zigma.services.BeneficiaryService;
 
 /**
- * @author Arib aka FREAKSTER
+ * @author Arib 
  * @creation_date 12th Oct 2019 15:44
- * @modification_date 12th Oct 2019 15:44
+ * @modification_date 21th Oct 2019 17:44
  * @version 1.0
  * @copyright Zensar Tech
  * @description This is a RESTful Webservice.

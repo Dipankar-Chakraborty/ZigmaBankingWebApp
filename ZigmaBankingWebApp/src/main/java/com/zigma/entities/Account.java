@@ -12,7 +12,6 @@ package com.zigma.entities;
 import java.time.LocalDateTime;
 import java.util.List;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -33,7 +32,7 @@ public class Account {
 	private double totalBalance;
 	private String accountType; //to be modified
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JsonIgnore
 	@JoinColumn(name = "crn")
 	private Customer customer;

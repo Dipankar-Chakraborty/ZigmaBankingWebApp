@@ -11,7 +11,6 @@ package com.zigma.entities;
 
 import java.time.LocalDate;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -28,9 +27,9 @@ public class Transaction {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int transactId;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne
 	@JsonIgnore
-	@JoinColumn(name = "accountId")
+	@JoinColumn(name = "accountNo")
 	private Account account;
 	@OneToOne
 	@JsonIgnore

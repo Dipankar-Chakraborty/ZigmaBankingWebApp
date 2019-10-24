@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.zigma.daos.AdminDao;
 import com.zigma.daos.AdminDaoImpl;
-import com.zigma.entities.Account;
 import com.zigma.entities.Admin;
 
 @Service
