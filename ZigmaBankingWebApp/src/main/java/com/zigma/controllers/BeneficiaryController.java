@@ -13,7 +13,7 @@ import com.zigma.entities.Beneficiary;
 import com.zigma.services.BeneficiaryService;
 
 /**
- * @author Arib 
+ * @author Arib
  * @creation_date 12th Oct 2019 15:44
  * @modification_date 21th Oct 2019 17:44
  * @version 1.0
@@ -23,23 +23,24 @@ import com.zigma.services.BeneficiaryService;
 
 @RestController
 public class BeneficiaryController {
-@Autowired
+	@Autowired
 	private BeneficiaryService beneficiaryService;
+
 	@GetMapping("/beneficiary")
-	public List<Beneficiary> getAllBeneficiary(){
-		
+	public List<Beneficiary> getAllBeneficiary() {
+
 		return beneficiaryService.findAllBeneficiary();
 	}
-	
-	
+
 	@GetMapping("/beneficiary/{id}")
-	public Beneficiary getBeneficiary(@PathVariable("id")long beneficiaryAccNo) {
-		return beneficiaryService.findBeneficiaryByAccountNo(beneficiaryAccNo);
+	public Beneficiary getBeneficiary(@PathVariable("id") int beneficiaryId) {
+		return beneficiaryService.findBeneficiaryById(beneficiaryId);
 	}
-	
+
 	@PostMapping("/beneficiary/add")
 	public String addBeneficiary(@RequestBody Beneficiary beneficiary) {
-		beneficiaryService.addBeneficiary(beneficiary);
-	return "New Beneficiary added "+beneficiary.getBeneficiaryId()+" is added!";
+		if (beneficiaryService.findBeneficiaryById(beneficiary.getBeneficiaryId()) != null)
+			beneficiaryService.addBeneficiary(beneficiary);
+		return "New Beneficiary is added!";
 	}
 }

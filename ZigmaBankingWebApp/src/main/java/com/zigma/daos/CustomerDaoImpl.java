@@ -14,14 +14,14 @@ import com.zigma.entities.Customer;
  * @modificationDate 21thOct 2019 10:09
  * @version 1.0
  * @copyright Zensar Tech
- * @description It is Product Dao Class.
- * 				This uses persistent Layer.
+ * @description It is Product Dao Class. This uses persistent Layer.
  */
 
 @Repository
 public class CustomerDaoImpl implements CustomerDao {
 	@Autowired
 	private HibernateTemplate hibernateTemplate;
+
 	@Override
 	public List<Customer> getAllCustomer() {
 		// TODO Auto-generated method stub
@@ -34,7 +34,6 @@ public class CustomerDaoImpl implements CustomerDao {
 		return hibernateTemplate.get(Customer.class, crn);
 	}
 
-
 	@Override
 	public void update(Customer customer) {
 		// TODO Auto-generated method stub
@@ -46,7 +45,5 @@ public class CustomerDaoImpl implements CustomerDao {
 		// TODO Auto-generated method stub
 		hibernateTemplate.delete(customer);
 	}
-	
-
 
 }

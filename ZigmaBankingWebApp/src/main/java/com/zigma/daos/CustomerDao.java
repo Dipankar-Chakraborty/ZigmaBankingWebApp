@@ -17,8 +17,6 @@ import com.zigma.entities.Customer;
 public interface CustomerDao {
 	 List<Customer> getAllCustomer();
 	Customer getCrn(long crn);
-	
-	
 	void update(Customer customer);
 	void delete(Customer customer);
 	

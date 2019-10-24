@@ -10,9 +10,6 @@ public interface AdminDao {
 	public List<Account> getAllCompleteAuthorization(long crn);
 
 	Admin findAdminById(long adminId);
-
-	
-
 	void update(Admin admin);
 
 

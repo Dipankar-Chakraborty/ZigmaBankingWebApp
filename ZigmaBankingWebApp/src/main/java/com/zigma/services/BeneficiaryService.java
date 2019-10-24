@@ -16,7 +16,7 @@ import com.zigma.entities.Beneficiary;
 public interface BeneficiaryService {
 	List<Beneficiary> findAllBeneficiary();
 	
-	Beneficiary findBeneficiaryByAccountNo(long beneficiaryAccNo);
+	Beneficiary findBeneficiaryById(int beneficiaryId);
 	
 	void addBeneficiary(Beneficiary beneficiary);
 	boolean beneficiaryExists(Beneficiary beneficiary);

@@ -29,9 +29,9 @@ public class BeneficiaryServiceImpl implements BeneficiaryService {
 	}
 
 	@Override
-	public Beneficiary findBeneficiaryByAccountNo(long beneficiaryAccNo) {
+	public Beneficiary findBeneficiaryById(int beneficiaryId) {
 
-		return beneficiaryDao.getBeneficiaryByAccountNo(beneficiaryAccNo);
+		return beneficiaryDao.getBeneficiaryById(beneficiaryId);
 	}
 	
 	@Override

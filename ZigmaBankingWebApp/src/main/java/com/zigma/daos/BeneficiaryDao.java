@@ -1,9 +1,6 @@
 package com.zigma.daos;
 
 import java.util.List;
-
-
-
 import com.zigma.entities.Beneficiary;
 
 /**
@@ -19,8 +16,7 @@ import com.zigma.entities.Beneficiary;
 public interface BeneficiaryDao {
 	List<Beneficiary> getAllBeneficiary();
 	
-	Beneficiary getBeneficiaryByAccountNo(long beneficiaryAccNo);
-	
+	Beneficiary getBeneficiaryById(int beneficiaryId);
 	
 	void insert(Beneficiary beneficiary);
 	

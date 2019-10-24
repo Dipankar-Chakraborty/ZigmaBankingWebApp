@@ -1,11 +1,9 @@
 package com.zigma.daos;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
-
 import com.zigma.entities.Beneficiary;
 
 /**
@@ -14,14 +12,14 @@ import com.zigma.entities.Beneficiary;
  * @modificationDate 19thOct 2019 10:09
  * @version 2.0
  * @copyright Zensar Tech
- * @description It is Beneficiary Dao Class.
- * 				This uses persistent Layer.
+ * @description It is Beneficiary Dao Class. This uses persistent Layer.
  *
  */
 @Repository
 public class BeneficiaryDaoImpl implements BeneficiaryDao {
 	@Autowired
 	private HibernateTemplate hibernateTemplate;
+
 	@Override
 	public List<Beneficiary> getAllBeneficiary() {
 		// TODO Auto-generated method stub
@@ -29,11 +27,10 @@ public class BeneficiaryDaoImpl implements BeneficiaryDao {
 	}
 
 	@Override
-	public Beneficiary getBeneficiaryByAccountNo(long beneficiaryAccNo) {
+	public Beneficiary getBeneficiaryById(int beneficiaryId) {
 		// TODO Auto-generated method stub
-		return hibernateTemplate.get(Beneficiary.class, beneficiaryAccNo); 
+		return hibernateTemplate.get(Beneficiary.class, beneficiaryId);
 	}
-
 
 	@Override
 	public void insert(Beneficiary beneficiary) {

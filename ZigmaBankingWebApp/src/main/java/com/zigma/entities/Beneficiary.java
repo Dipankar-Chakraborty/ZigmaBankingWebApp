@@ -26,7 +26,7 @@ public class Beneficiary {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int beneficiaryId;
-	private int beneficiaryAccNo;
+	private long beneficiaryAccNo;
 	private String ifsc;
 	private String bankName;
 	private String nickName;
@@ -46,11 +46,11 @@ public class Beneficiary {
 		this.beneficiaryId = beneficiaryId;
 	}
 
-	public int getBeneficiaryAccNo() {
+	public long getBeneficiaryAccNo() {
 		return beneficiaryAccNo;
 	}
 
-	public void setBeneficiaryAccNo(int beneficiaryAccNo) {
+	public void setBeneficiaryAccNo(long beneficiaryAccNo) {
 		this.beneficiaryAccNo = beneficiaryAccNo;
 	}
 

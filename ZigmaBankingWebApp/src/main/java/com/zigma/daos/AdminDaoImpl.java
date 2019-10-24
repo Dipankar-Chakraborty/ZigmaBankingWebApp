@@ -27,13 +27,10 @@ public class AdminDaoImpl implements AdminDao {
 		return hibernateTemplate.get(Admin.class, adminId);
 	}
 
-	
-
 	public void update(Admin admin) {
 		hibernateTemplate.update(admin);
 	}
 	
-
 	@Override
 	public List<Account> getAllPendingAuthorization(long crn) {
 		// TODO Auto-generated method stub
